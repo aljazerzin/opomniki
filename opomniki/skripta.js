@@ -15,6 +15,13 @@ window.addEventListener('load', function() {
 			// - sicer zmanjšaj čas za 1 in nastavi novo vrednost v časovniku
 		}
 	}
+	var izvediPrijavo=function(event)
+	{
+		var ime = document.querySelector("#uporabnisko_ime").value;
+		document.querySelector("#uporabnik").innerHTML = ime;
+		document.querySelector(".pokrivalo").style.display = "none";
+	}
+	document.querySelector("#prijavniGumb").addEventListener('click',izvediPrijavo);
 	setInterval(posodobiOpomnike, 1000);
 	
 });
